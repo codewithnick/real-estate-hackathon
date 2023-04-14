@@ -1,0 +1,106 @@
+.property-analysis{
+    width: 100%;
+}
+.property-analysis section{
+    width: 50%;
+}
+.index-color{
+    width: 10px;
+    height: 10px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+#indexes{
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.index-container{
+    width: 100%;
+    padding: 2px;
+    margin: 2px;
+    align-items: center;
+    justify-content: left;
+}
+.index-text{
+    padding-left: 5px;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 525;
+}
+.heatmap-container{
+    border-radius: 10px;
+    background: linear-gradient(to right, #E54B4B, #329F5B);
+    width: 80%;
+    height: 20px;
+}
+.heatmap {
+    height: 20px;
+}
+.indicator{
+    height: 20px;
+    width: 20px;
+    background-color: blue;
+    border-radius: 50%;
+}
+.comparisons{
+ text-align: center;
+ text-transform: capitalize;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#comparison-table td{
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+}
+/* Define the background and text colors */
+#attrs {
+    background-color: #4285f4;
+    color: #ffffff;
+    font-size: 14px;
+    margin: 5px 5px;
+  }
+  
+  /* Define the table headers */
+  #attrs th {
+    background-color: #ffffff;
+    color: #4285f4;
+    font-weight: bold;
+  }
+  
+  /* Define the table cells */
+  #attrs td {
+    border: 1px solid #ffffff;
+    background-color: #79a9f7;
+    padding: 5px;
+  }
+  .owner-container {
+    margin-top: 20px;
+  }
+  #owner {
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 80%;
+    
+  }
+  
+  #owner-info {
+    
+    padding: 10px;
+  }
+  
+  #owner h2 {
+    margin-top: 0;
+  }
+  
+  #owner p {
+    margin-bottom: 5px;
+  }
+  
