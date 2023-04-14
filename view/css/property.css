@@ -1,0 +1,80 @@
+.property-image img{
+    
+    height: 200px;
+    width: 325px;
+}
+.property-card{
+    background-color: #84bfe18d;
+    height: 250px;
+    width: 325px;
+    margin: 10px;
+}
+.property-card .details{
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: space-around;
+}
+.property-container{
+    width: 100%;
+    margin: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.editor span{
+   text-decoration: underline;
+   background-color: ghostwhite;
+    width: 100%;
+}
+.property-slider{
+    width: 100%;
+    overflow-y: scroll;
+    justify-content: space-between;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 80%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    z-index: 9999;
+  }
+  .popup .property-left img{
+    width: 500px;
+    height: 300px;
+    border: 3px solid #84bfe18d;
+  }
+  .popup .property-left{
+    border-right: 1px solid #84bfe18d;
+    padding-right: 10px;
+  }
+  .popup .property-right{
+    margin-left: 20px ;
+  }
+  .popup .property-right h5{
+    background-color:  #84bfe14a;
+
+  }
+  .popup button {
+    display: inline-block;
+    padding: 20px 40px;
+    background-image: linear-gradient(to bottom, #84bfe1, #84bfe14a);
+    background-color: #84bfe1;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0px 5px 0px 0px #84bfe14a;
+    transition: background-color 0.3s ease;
+  }
+  
+  .popup button:hover {
+    background-color: #849ee1;
+  }
+  
