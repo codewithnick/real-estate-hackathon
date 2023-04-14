@@ -1,0 +1,33 @@
+{% load static  %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/base.css' %}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico.png' %}"/>
+    {%block head%}
+    {%endblock%}
+    <title>{%block title%}{%endblock%}</title>
+  </head>
+  <body>
+    <ul class=base-ul>
+        <li class=base-li><a class="base-active base" href="/">PropFolio</a></li>
+        <li class=base-li><a class=base >Account</a></li>
+
+        {%if request.user.is_authenticated%}
+        <li style="float:right" class=base-li><a class=base href="{% url 'logout' %}">Logout</a></li>
+        {%else%}
+        <li style="float:right" class=base-li><a class=base href="{% url 'sign_in' %}">Sign in/Register</a></li>
+        {%endif%}
+
+    </ul>
+
+
+    {%block content%}
+    {%endblock%}
+  </body>
+</html>
