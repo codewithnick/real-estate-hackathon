@@ -76,8 +76,17 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'HOST': '34.131.170.181',
+        'USER': 'postgres',
+        'PASSWORD': 'propfolio',
+        'NAME': 'postgres',
+        'OPTIONS': {
+            'sslmode': 'verify-ca', #leave this line intact
+            'sslrootcert': 'D:/server-ca.pem',
+            "sslcert": "D:/client-cert.pem",
+            "sslkey": "D:/client-key.pem",
+        }
     }
 }
 
@@ -109,8 +118,6 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
-
-USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
