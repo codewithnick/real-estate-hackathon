@@ -70,6 +70,7 @@ def addprop(request):
     if request.method=='POST':
         area=int(request.POST.get('area',1000))
         location=request.POST['location']
+        city=request.POST['city']
         bedrooms=request.POST['bedrooms']
         latitude=request.POST['latitude']
         longitude=request.POST['longitude']
@@ -216,7 +217,7 @@ def addprop(request):
         else:
             refrigerator=False
         c_user=request.user
-        prope=property(user=c_user,area=area,location=location,No_of_Bedrooms=bedrooms,latitude=latitude,longitude=longitude,description=description,Resale=resale,MaintenanceStaff=maintenance_staff,Gymnasium=gymnasium,SwimmingPool=swimming_pool,LandscapedGardens=landscaped_gardens,	JoggingTrack=jogging_track,	RainWaterHarvesting=rain_water_harvesting,	IndoorGames=indoor_games,	ShoppingMall=shopping_mall	,Intercom=intercom	,SportsFacility=sports_facility	,ATM=atm	,ClubHouse=club_house	,School=school	,ALL_Security=security	,PowerBackup=power_backup	,CarParking=car_parking	,StaffQuarter=staff_quarter	,Cafeteria=cafeteria	,MultipurposeRoom=multipurpose_room	,Hospital= hospital	,WashingMachine=washing_machines	,Gasconnection=gas_connection	,AC=ac	,Wifi=wifi	,Children_playarea=childrens_playarea	,LiftAvailable=lift_available	,BED=bed	,VaastuCompliant=vaastu_compliant,Microwave=microwave	,GolfCourse=golf_course	,TV=tv	,DiningTable=dining_table	,Sofa=sofa	,Wardrobe=wardrobe	,Refrigerator=refrigerator)
+        prope=property(user=c_user,area=area,city=city,location=location,No_of_Bedrooms=bedrooms,latitude=latitude,longitude=longitude,description=description,Resale=resale,MaintenanceStaff=maintenance_staff,Gymnasium=gymnasium,SwimmingPool=swimming_pool,LandscapedGardens=landscaped_gardens,	JoggingTrack=jogging_track,	RainWaterHarvesting=rain_water_harvesting,	IndoorGames=indoor_games,	ShoppingMall=shopping_mall	,Intercom=intercom	,SportsFacility=sports_facility	,ATM=atm	,ClubHouse=club_house	,School=school	,ALL_Security=security	,PowerBackup=power_backup	,CarParking=car_parking	,StaffQuarter=staff_quarter	,Cafeteria=cafeteria	,MultipurposeRoom=multipurpose_room	,Hospital= hospital	,WashingMachine=washing_machines	,Gasconnection=gas_connection	,AC=ac	,Wifi=wifi	,Children_playarea=childrens_playarea	,LiftAvailable=lift_available	,BED=bed	,VaastuCompliant=vaastu_compliant,Microwave=microwave	,GolfCourse=golf_course	,TV=tv	,DiningTable=dining_table	,Sofa=sofa	,Wardrobe=wardrobe	,Refrigerator=refrigerator)
         prope.save()
         print('Property created')
         return redirect(home)
