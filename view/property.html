@@ -1,15 +1,84 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Stock Analysis</title>
+    <title>Property Analysis</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/analysis.css">
+    <link rel="icon" type="image/png" href="img/favicon.png"/>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   </head>
   <body>
 <div class="flex property-analysis">
     <section class="left flex flex_column">
-        <div id="chart"></div>
+      <div class="comparisons flex flex_column">
+        <h2>Details</h2> 
+        <div class="flex">
+          <div class="property-details flex flex_column">
+            <h2>Property Details</h2>
+            <ul>
+              <li><strong>Address:</strong> 123 Main St.</li>
+              <li><strong>Price:</strong> $500,000</li>
+              <li><strong>Bedrooms:</strong> 3</li>
+              <li><strong>Bathrooms:</strong> 2</li>
+              <li><strong>Square Feet:</strong> 2,000</li>
+            </ul>
+          </div>
+          
+        </div>
+        <h2>comparisons with local properties</h2>      
+        <table id="comparison-table">
+        
+            <tr>
+                <td><h3>price range</h3></td>
+                <td><div class="heatmap-container flex"> <div class="heatmap" data-value="5"></div><div class="indicator"></div></div></td>
+            </tr>
+            <tr>
+                <td><h3>aminites</h3></td>
+                <td><div class="heatmap-container flex"> <div class="heatmap" data-value="7"></div><div class="indicator"></div></div></td>
+            </tr>
+            <tr>
+                <td><h3>ROI</h3></td>
+                <td><div class="heatmap-container flex"> <div class="heatmap" data-value="7"></div><div class="indicator"></div></div></td>
+            </tr>
+         </table>        
+         <hr> 
+         <h2>Other Details</h2>      
+         <table id="attrs" >
+            <tr>
+                <td>Price</td><td>100000</td>
+            </tr>
+            <tr>
+                <td>BHK</td><td>1</td>
+            </tr>
+            <tr>
+                <td>area</td><td>1000</td>
+            </tr>
+            <tr>
+                <td>Price/sqft</td><td>100</td>
+            </tr>
+            <tr>
+                <td>cordinates</td><td>(100,100)</td>
+            </tr>
+            <tr>
+                <td>Resale</td><td>YES</td>
+            </tr>
+         </table>
+         <div class="owner-container flex flex_center">
+         <div id="owner" class="card">
+            <div id="owner-info" class="owner-info">
+              <h2>Property Owner Details</h2>
+              <p>Name: John Doe</p>
+              <p>Email: john.doe@example.com</p>
+              <p>Phone: 555-555-5555</p>
+              <button>contact</button>
+            </div>
+          </div>
+          </div>
+          
+    </div>
+    </section>
+    <section class="right flex flex_column">
+      <div id="chart"></div>
         <div id="indexes" class="flex flex_column">
             <div class="index-container flex">
                 <div class="index-color" style="background-color: red;"></div>
@@ -24,61 +93,7 @@
                 <div class="index-text">predicted using Machine learning</div>
             </div>
         </div>
-    </section>
-    <section class="right flex flex_column">
-        <div class="comparisons flex flex_column">
-           
-         
-            <h2>comparisons with local properties</h2>      
-            <table id="comparison-table">
-            
-                <tr>
-                    <td><h3>price range</h3></td>
-                    <td><div class="heatmap-container flex"> <div class="heatmap" data-value="5"></div><div class="indicator"></div></div></td>
-                </tr>
-                <tr>
-                    <td><h3>aminites</h3></td>
-                    <td><div class="heatmap-container flex"> <div class="heatmap" data-value="7"></div><div class="indicator"></div></div></td>
-                </tr>
-                <tr>
-                    <td><h3>ROI</h3></td>
-                    <td><div class="heatmap-container flex"> <div class="heatmap" data-value="7"></div><div class="indicator"></div></div></td>
-                </tr>
-             </table>           
-             <h2>Other Details</h2>      
-             <table id="attrs" >
-                <tr>
-                    <td>Price</td><td>100000</td>
-                </tr>
-                <tr>
-                    <td>BHK</td><td>1</td>
-                </tr>
-                <tr>
-                    <td>area</td><td>1000</td>
-                </tr>
-                <tr>
-                    <td>Price/sqft</td><td>100</td>
-                </tr>
-                <tr>
-                    <td>cordinates</td><td>(100,100)</td>
-                </tr>
-                <tr>
-                    <td>Resale</td><td>YES</td>
-                </tr>
-             </table>
-             <div class="owner-container flex flex_center">
-             <div id="owner" class="card">
-                <div id="owner-info" class="owner-info">
-                  <h2>Property Owner Details</h2>
-                  <p>Name: John Doe</p>
-                  <p>Email: john.doe@example.com</p>
-                  <p>Phone: 555-555-5555</p>
-                  <button>contact</button>
-                </div>
-              </div>
-              </div>
-              
-        </div>
+        
     </section>
       
 </div>    

@@ -84,9 +84,9 @@ DATABASES = {
         'NAME': 'postgres',
         'OPTIONS': {
             'sslmode': 'verify-ca', #leave this line intact
-            'sslrootcert': 'D:/server-ca.pem',
-            "sslcert": "D:/client-cert.pem",
-            "sslkey": "D:/client-key.pem",
+            'sslrootcert': 'certificates/server-ca.pem',
+            "sslcert": "certificates/client-cert.pem",
+            "sslkey": "certificates/client-key.pem",
         }
     }
 }
