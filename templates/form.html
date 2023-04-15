@@ -8,7 +8,7 @@
     {% block content%}
   <div class="container">
     <h1>Real Estate Form</h1>
-    <form>
+    <form method="post">
         {% csrf_token %}
       <div class="form-group">
         <label for="area">Area:</label>
@@ -52,7 +52,7 @@
         <div class="form-group">
             <button type="submit">Submit</button>
        </div>
-        
+
         <input type="checkbox" id="maintenance-staff"> Maintenance Staff
         <input type="checkbox" id="gymnasium"> Gymnasium
         <input type="checkbox" id="swimming-pool"> Swimming Pool
@@ -88,10 +88,10 @@
         <input type="checkbox" id="sofa"> Sofa
         <input type="checkbox" id="wardrobe"> Wardrobe
         <input type="checkbox" id="refrigerator"> Refrigerator
-        
-        
+
+
         </form>
-        
+
           </div>
           <script src="{%static 'js/script.js' %}"></script>
 {% endblock%}

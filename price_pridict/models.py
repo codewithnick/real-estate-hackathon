@@ -1,9 +1,10 @@
 from django.db import models
-
+from django.contrib.auth.models import User, auth
 # Create your models here.
 class property(models.Model):
     area=models.IntegerField()
     location=models.CharField(max_length=100)
+    description=models.CharField(max_length=100)
     city=models.CharField(max_length=100)
     No_of_Bedrooms=models.IntegerField()
     Resale=models.IntegerField()
@@ -42,4 +43,7 @@ class property(models.Model):
     Sofa=models.IntegerField()
     Wardrobe=models.IntegerField()
     Refrigerator=models.IntegerField()
+    user=models.ForeignKey(User,on_delete=models.CASCADE)
+    longitude=models.IntegerField()
+    latitude=models.IntegerField()
 
