@@ -95,7 +95,7 @@
                   <div class="property-slider flex" style="display: flex;">
                       {% for x in objs1 %}
                       <div class="property-card flex flex_column" onclick="location('#')">
-                          <div class="property-image"> 
+                          <div class="property-image flex flex_center"> 
                               <img src="{%static 'img/property.jpg' %}" alt="">
                           </div>
                           <div class="details flex">
@@ -159,7 +159,7 @@
         <section class="home-faq">
           <div id="faqs" class="home-content1">
             <div class="home-heading2">
-              <h2 class="home-header2">About Us</h2>
+              <h2 class="home-header2">FAQ</h2>
               <p class="home-caption3">
                 commonly asked FAQ is answered below
               </p>
@@ -170,8 +170,8 @@
                 class="accordion home-element"
               >
                 <div class="home-content2">
-                  <span class="home-header3">question goes here                  </span>
-                  <span data-role="accordion-content" class="home-description">answer goes here</span>
+                  <span class="home-header3">What are the types of properties available on your site?              </span>
+                  <span data-role="accordion-content" class="home-description">We offer a wide variety of properties on our site, including apartments, houses, villas, commercial properties, and land.</span>
                 </div>
                 <div class="home-icon-container">
                   <svg
@@ -192,7 +192,61 @@
                   </svg>
                 </div>
               </div>
-              
+              <div
+              data-role="accordion-container"
+              class="accordion home-element"
+            >
+              <div class="home-content2">
+                <span class="home-header3">What are the fees for listing my property on your site?       </span>
+                <span data-role="accordion-content" class="home-description">Listing a property is completely free as of now</span>
+              </div>
+              <div class="home-icon-container">
+                <svg
+                  viewBox="0 0 1024 1024"
+                  data-role="accordion-icon-closed"
+                  class="home-icon15"
+                >
+                  <path
+                    d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                  ></path></svg><svg
+                  viewBox="0 0 1024 1024"
+                  data-role="accordion-icon-open"
+                  class="home-icon17"
+                >
+                  <path
+                    d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div
+            data-role="accordion-container"
+            class="accordion home-element"
+          >
+            <div class="home-content2">
+              <span class="home-header3">How do I list my property on your site?</span>
+              <span data-role="accordion-content" class="home-description">You can list your property on our site by creating an account and filling out the necessary details on our "List Your Property" page. You can also upload photos and videos of your property to make it more attractive to potential buyers or renters.</span>
+            </div>
+            <div class="home-icon-container">
+              <svg
+                viewBox="0 0 1024 1024"
+                data-role="accordion-icon-closed"
+                class="home-icon15"
+              >
+                <path
+                  d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                ></path></svg><svg
+                viewBox="0 0 1024 1024"
+                data-role="accordion-icon-open"
+                class="home-icon17"
+              >
+                <path
+                  d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          
 
             </div>
           </div>
@@ -221,13 +275,11 @@
                
                 <div class="home-items2">
                   <button class="home-link09 button button-clean">
-                    About us
+                    FAQ
                   </button>
                   <button class="home-link11 button button-clean">
                     SIGN UP
                   </button>
-                  <button class="home-link12 button button-clean">Faqs</button>
-                </div>
               </div>
             </div>
             <span class="home-copyright">
