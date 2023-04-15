@@ -1,7 +1,10 @@
-.property-image img{
-    
-    height: 200px;
-    width: 325px;
+.property-image{
+  display: flex;
+}
+.property-image img{    
+    height: 150px;
+    width: 250px;
+    margin: 10px;
 }
 .flex{
   display: flex;
@@ -11,6 +14,9 @@
 }
 #mypropertiescontainer{
   width: 100%;
+}
+#tours{
+  background-color: #e5e5e5;
 }
 /* width and height of the scrollbar track */
 ::-webkit-scrollbar {
@@ -36,10 +42,12 @@
 }
 
 .property-card{
-    background-color: #84bfe18d;
-    height: 250px;
+    background-color: #E8DED5;
+    height: 225px;
     width: 325px;
     margin: 10px;
+    border-radius: 10px;
+    
 }
 .property-card .details{
     font-size: 14px;
@@ -52,7 +60,17 @@
     align-items: center;
     text-align: center;
 }
-
+.property-container span{
+  color: rgb(53, 43, 42);
+  font-size: 40px;
+  font-style: normal;
+  font-family: Cormorant Infant;
+  font-weight: 700;
+  line-height: 60px;
+}
+.details div{
+  margin-bottom: 5px;
+}
 .editor span{
    text-decoration: underline;
    background-color: ghostwhite;
@@ -62,51 +80,6 @@
     width: 100%;
     overflow-y: scroll;
     justify-content: space-between;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
 }
-.popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    height: 80%;
-    width: 80%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border: 1px solid black;
-    z-index: 9999;
-  }
-  .popup .property-left img{
-    width: 500px;
-    height: 300px;
-    border: 3px solid #84bfe18d;
-  }
-  .popup .property-left{
-    border-right: 1px solid #84bfe18d;
-    padding-right: 10px;
-  }
-  .popup .property-right{
-    margin-left: 20px ;
-  }
-  .popup .property-right h5{
-    background-color:  #84bfe14a;
-
-  }
-  .popup button {
-    display: inline-block;
-    padding: 20px 40px;
-    background-image: linear-gradient(to bottom, #84bfe1, #84bfe14a);
-    background-color: #84bfe1;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 10px;
-    box-shadow: 0px 5px 0px 0px #84bfe14a;
-    transition: background-color 0.3s ease;
-  }
-  
-  .popup button:hover {
-    background-color: #849ee1;
-  }
-  
