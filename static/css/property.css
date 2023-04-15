@@ -1,5 +1,7 @@
 .property-image{
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .property-image img{    
     height: 150px;
@@ -79,6 +81,7 @@
 .property-slider{
     width: 100%;
     overflow-y: scroll;
+    overflow-x: hidden;
     justify-content: space-between;
     margin-bottom: 30px;
     padding-bottom: 30px;
