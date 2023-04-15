@@ -3,38 +3,67 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from .models import property
+import math
+import random
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+import math
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import ExtraTreesRegressor
+from sklearn.metrics import mean_absolute_error,r2_score,mean_squared_error
+from sklearn.model_selection import train_test_split
+from sklearn import tree
+from matplotlib import pyplot as plt
+from string import ascii_letters
+import pickle
+import os
+def prediction(area,gas,lat,bhk,lng,pool,playarea,powerbacup,ac):
+  pwd = os.path.dirname(__file__)
+  pickled_model=pickle.load(open(pwd+'\\model.pkl','rb'))
+  val=[[area,gas,lat,bhk,lng,pool,playarea,powerbacup,ac]]
+  return round(float(pickled_model.predict(val)[0]) *(10**5),2)
 
-# import pandas as pd
-# import numpy as np
-# import seaborn as sns
-# import matplotlib.pyplot as plt
-# import matplotlib.image as mpimg
-# import folium
-# import math
-# import plotly.graph_objects as go
-# import plotly.express as px
-# import eli5
-# import graphviz
-# import networkx as nx
-# from eli5.sklearn import PermutationImportance
-# from folium import Choropleth, Circle, Marker
-# from folium.plugins import HeatMap, MarkerCluster
-# from sklearn.ensemble import RandomForestRegressor
-# from sklearn.tree import DecisionTreeRegressor
-# from sklearn.ensemble import ExtraTreesRegressor
-# from xgboost import XGBRegressor
-# from sklearn.metrics import mean_absolute_error,r2_score,mean_squared_error
-# from sklearn.model_selection import train_test_split
-# from geopy.geocoders import Nominatim
-# from sklearn import tree
-# from matplotlib import pyplot as plt
-# from string import ascii_letters
-# import pickle
-#
-# def prediction(area,gas,lat,bhk,lng,pool,playarea,powerbacup,ac):
-#   pickled_model=pickle.load(open('model.pkl','rb'))
-#   val=[[area,gas,lat,bhk,lng,pool,playarea,powerbacup,ac]]
-#   return pickled_model.predict(val)
+
+random.seed()
+def hpi(price,year):
+    if(year=="2017 q1"):
+        return (98/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2017 q2"):
+        return (99/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2018 q1"):
+        return (104/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2018 q2"):
+        return (107/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2019 q1"):
+        return (104/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2019 q2"):
+        return (113/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2020 q2"):
+        return (104/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2021 q1"):
+        return (105/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2021 q2"):
+        return (106/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2022 q1"):
+        return (109/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2022 q2"):
+        return (110/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2023 q1"):
+        return (111/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2023 q2"):
+        return (111/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2024 q1"):
+        return (112/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2024 q2"):
+        return (114/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2025 q1"):
+        return (115/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2025 q2"):
+        return (116/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+
 
 
 
@@ -233,5 +262,43 @@ def home(request):
 def prop(request,prop_id):
     if request.method=='GET':
         objs =property.objects.filter(id=prop_id)
-        return render(request,'property.html', {'objs' : objs})
+        for x in objs:
+            price=prediction(x.area,x.Gasconnection,x.latitude,x.No_of_Bedrooms,x.longitude,x.SwimmingPool,x.Children_playarea,x.PowerBackup,x.AC)
+            p1=hpi(price,'2017 q1')
+            p1=hpi(price,'2017 q2')
+            p1=hpi(price,'2017 q3')
+            p1=hpi(price,'2017 q4')
+            p1=hpi(price,'2018 q1')
+            p1=hpi(price,'2018 q2')
+            p1=hpi(price,'2018 q3')
+            p1=hpi(price,'2018 q4')
+            p1=hpi(price,'2019 q1')
+            p1=hpi(price,'2019 q2')
+            p1=hpi(price,'2019 q3')
+            p1=hpi(price,'2019 q4')
+            p1=hpi(price,'2020 q1')
+            p1=hpi(price,'2020 q2')
+            p1=hpi(price,'2020 q3')
+            p1=hpi(price,'2020 q4')
+            p1=hpi(price,'2021 q1')
+            p1=hpi(price,'2021 q2')
+            p1=hpi(price,'2021 q3')
+            p1=hpi(price,'2021 q4')
+            p1=hpi(price,'2022 q1')
+            p1=hpi(price,'2022 q2')
+            p1=hpi(price,'2017 q3')
+            p1=hpi(price,'2017 q4')
+            p1=hpi(price,'2017 q1')
+            p1=hpi(price,'2017 q2')
+            p1=hpi(price,'2017 q3')
+            p1=hpi(price,'2017 q4')
+            p1=hpi(price,'2017 q1')
+            p1=hpi(price,'2017 q2')
+            p1=hpi(price,'2017 q3')
+            p1=hpi(price,'2017 q4')
+            p1=hpi(price,'2017 q1')
+            p1=hpi(price,'2017 q1')
+            p1=hpi(price,'2017 q1')
+            p1=hpi(price,'2017 q1')
+        return render(request,'property.html', {'objs' : objs,'price':price,'p1':p1})
 

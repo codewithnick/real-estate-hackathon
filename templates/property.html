@@ -18,10 +18,11 @@
             <h2>Property Details</h2>
             <ul>
               <li><strong>Address:</strong> {{x.location}}</li>
-              <li><strong>Price:</strong> $500,000</li>
+              <li><strong>Price:</strong> {{price}} INR</li>
               <li><strong>Bedrooms:</strong> {{x.No_of_Bedrooms}}</li>
-              <li><strong>Bathrooms:</strong> 2</li>
               <li><strong>Square Feet:</strong> {{x.area}}</li>
+              <li><strong>Latitude:</strong> {{x.Latitude}}</li>
+              <li><strong>Longitude:</strong> {{x.Longitude}}</li>
             </ul>
           </div>
 
@@ -46,7 +47,7 @@
          <h2>Other Details</h2>
          <table id="attrs" >
             <tr>
-                <td>Price</td><td>100000</td>
+                <td>Predicted Price</td><td>{{price}} INR </td>
             </tr>
             <tr>
                 <td>BHK</td><td>{{x.No_of_Bedrooms}}</td>
@@ -102,7 +103,7 @@
     <script>
    var trace1 = {
   x: ['2017 Q1', '2017 Q2', '2018 Q1', '2018 Q2', '2019 Q1', '2019 Q2', '2020 Q1', '2020 Q2', '2021 Q1', '2021 Q2', '2022 Q1', '2022 Q2', '2023 Q1', '2023 Q2', '2024 Q1', '2024 Q2'],
-  y: [16697843.82, 16485449.73, 17770682.45, 18239206.64, 17844498.45, 19564919.36, 19237261.52, 18726522.34, 20293198.01, 20945883.98, 21646457.31, 22376820.06, 23139283.42, 23936259.24, 24770262.81, 25644009.93],
+  y: ["{{p1}}", 16485449.73, 17770682.45, 18239206.64, 17844498.45, 19564919.36, 19237261.52, 18726522.34, 20293198.01, 20945883.98, 21646457.31, 22376820.06, 23139283.42, 23936259.24, 24770262.81, 25644009.93],
   mode: 'lines+markers',
   type: 'scatter',
   name: 'Price',
