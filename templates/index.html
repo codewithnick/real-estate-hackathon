@@ -1,257 +1,467 @@
 {%extends 'base.html'%}
 {% load static  %}
 {% block head%}
+    <meta property="og:title" content="Traveler template" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
 
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{%static 'css/index.css' %}">
-    <link rel="stylesheet" type="text/css" href="{%static 'css/sidebar.css' %}">
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Karla;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <!--This is the head section-->
+    <!-- <style> ... </style> -->
+
     <link rel="stylesheet" type="text/css" href="{%static 'css/style.css' %}">
-    <link rel="stylesheet" type="text/css" href="{%static 'css/property.css' %}">
-    <script src="{%static 'js/jquery-3.6.0.js' %}"></script>
-    
-    <script src="{%static 'js/index.js' %}"></script>
-    <script src="{%static 'js/js2.js' %}"></script>
-    <!-- fontawesomeIcons -->
-    <link rel="stylesheet" href="{%static 'css/all.min.css' %}">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="ISO-8859-1">
-{% endblock%}
-{% block content%}
+    <link rel="stylesheet" type="text/css" href="{%static 'css/home.css' %}">
+    <script type="text/javascript" src="https://unpkg.com/dangerous-html@0.1.12/dist/default/lib.umd.js"></script>
+    {% endblock%}
+    {% block content%}
+    <div>
+      
+      
 
-
-            <section class="editor flex flex_column">
-                <div id="mypropertiescontainer">
-                    <div class="flex property-container flex_column">
-                        <span>Delhi</span> 
-                        <div class="property-slider flex">
-                            <div class="property-card flex flex_column">
-                                <div class="property-image"> 
-                                    <img src="{%static 'img/property.jpg' %}" alt="">
-                                </div>
-                                <div class="details flex">
-                                    <div class="flex flex_column">
-                                        <div class="location">Sector 10 Dwarka</div>
-                                        <div class="bhk">2 BHK</div>
-                                    </div>
-                                    <a href="#" class="view_more more-details">see more</a>
-                                    
-                                </div>
-                            </div>
-                            <div class="property-card flex flex_column">
-                                <div class="property-image"> 
-                                    <img src="{%static 'img/property.jpg' %}" alt="">
-                                </div>
-                                <div class="details flex">
-                                    <div class="flex flex_column">
-                                        <div class="location">Sector 10 Dwarka</div>
-                                        <div class="bhk">2 BHK</div>
-                                    </div>
-                                    <a href="#" class="view_more more-details">see more</a>
-                                    
-                                </div>
-                            </div>
-                            <div class="property-card flex flex_column">
-                                <div class="property-image"> 
-                                    <img src="{%static 'img/property.jpg' %}" alt="">
-                                </div>
-                                <div class="details flex">
-                                    <div class="flex flex_column">
-                                        <div class="location">Sector 10 Dwarka</div>
-                                        <div class="bhk">2 BHK</div>
-                                    </div>
-                                    <a href="#" class="view_more more-details">see more</a>
-                                    
-                                </div>
-                            </div>
-                            <div class="property-card flex flex_column">
-                                <div class="property-image"> 
-                                    <img src="{%static 'img/property.jpg' %}" alt="">
-                                </div>
-                                <div class="details flex">
-                                    <div class="flex flex_column">
-                                        <div class="location">Sector 10 Dwarka</div>
-                                        <div class="bhk">2 BHK</div>
-                                    </div>
-                                    <a href="#" class="view_more more-details">see more</a>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex property-container flex_column">
-                        <span>Delhi</span> 
-                        <div class="property-slider flex">
-                            <div class="property-card flex flex_column">
-                                <div class="property-image"> 
-                                    <img src="{%static 'img/property.jpg' %}" alt="">
-                                </div>
-                                <div class="details flex">
-                                    <div class="flex flex_column">
-                                        <div class="location">Sector 10 Dwarka</div>
-                                        <div class="bhk">2 BHK</div>
-                                    </div>
-                                    <a href="#" class="view_more more-details">see more</a>
-                                    
-                                </div>
-                            </div>
-                            <div class="property-card flex flex_column">
-                                <div class="property-image"> 
-                                    <img src="{%static 'img/property.jpg' %}" alt="">
-                                </div>
-                                <div class="details flex">
-                                    <div class="flex flex_column">
-                                        <div class="location">Sector 10 Dwarka</div>
-                                        <div class="bhk">2 BHK</div>
-                                    </div>
-                                    <a href="#" class="view_more more-details">see more</a>
-                                    
-                                </div>
-                            </div>
-                            <div class="property-card flex flex_column">
-                                <div class="property-image"> 
-                                    <img src="{%static 'img/property.jpg' %}" alt="">
-                                </div>
-                                <div class="details flex">
-                                    <div class="flex flex_column">
-                                        <div class="location">Sector 10 Dwarka</div>
-                                        <div class="bhk">2 BHK</div>
-                                    </div>
-                                    <a href="#" class="view_more more-details">see more</a>
-                                    
-                                </div>
-                            </div>
-                            <div class="property-card flex flex_column">
-                                <div class="property-image"> 
-                                    <img src="{%static 'img/property.jpg' %}" alt="">
-                                </div>
-                                <div class="details flex">
-                                    <div class="flex flex_column">
-                                        <div class="location">Sector 10 Dwarka</div>
-                                        <div class="bhk">2 BHK</div>
-                                    </div>
-                                    <a href="#" class="view_more more-details">see more</a>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex property-container flex_column">
-                        <span>Delhi</span> 
-                        <div class="property-slider flex">
-                            <div class="property-card flex flex_column">
-                                <div class="property-image"> 
-                                    <img src="{%static 'img/property.jpg' %}" alt="">
-                                </div>
-                                <div class="details flex">
-                                    <div class="flex flex_column">
-                                        <div class="location">Sector 10 Dwarka</div>
-                                        <div class="bhk">2 BHK</div>
-                                    </div>
-                                    <a href="#" class="view_more more-details">see more</a>
-                                    
-                                </div>
-                            </div>
-                            <div class="property-card flex flex_column">
-                                <div class="property-image"> 
-                                    <img src="{%static 'img/property.jpg' %}" alt="">
-                                </div>
-                                <div class="details flex">
-                                    <div class="flex flex_column">
-                                        <div class="location">Sector 10 Dwarka</div>
-                                        <div class="bhk">2 BHK</div>
-                                    </div>
-                                    <a href="#" class="view_more more-details">see more</a>
-                                    
-                                </div>
-                            </div>
-                            <div class="property-card flex flex_column">
-                                <div class="property-image"> 
-                                    <img src="{%static 'img/property.jpg' %}" alt="">
-                                </div>
-                                <div class="details flex">
-                                    <div class="flex flex_column">
-                                        <div class="location">Sector 10 Dwarka</div>
-                                        <div class="bhk">2 BHK</div>
-                                    </div>
-                                    <a href="#" class="view_more more-details">see more</a>
-                                    
-                                </div>
-                            </div>
-                            <div class="property-card flex flex_column">
-                                <div class="property-image"> 
-                                    <img src="{%static 'img/property.jpg' %}" alt="">
-                                </div>
-                                <div class="details flex">
-                                    <div class="flex flex_column">
-                                        <div class="location">Sector 10 Dwarka</div>
-                                        <div class="bhk">2 BHK</div>
-                                    </div>
-                                    <a href="#" class="view_more more-details">see more</a>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="home-container">
+        <section class="home-hero">
+          <div class="home-main">
+            <div class="home-video"><div class="home-tint"></div></div>
+            <div class="home-content">
+              <div class="home-center">
+                <h1 class="home-header">Explore Properties Worldwide</h1>
+                <div class="home-heading">
+                  <p class="home-caption">
+                    Real Estate Trading Made Easy :&nbsp;Unlock Your Property
+                    Trading Potential with Our Innovative Platform
+                  </p>
                 </div>
-            </section>
-
-    </div>
-    <div class="popup flex">
-        <div class="flex" style="justify-content: space-between;">
-        <h2>Property Details</h2>
-        <div class="property-right">
-            <a href="#" class="close-popup">Close</a>
-        </div>
-        </div>
-
-        <div class="flex">
-            <div class="property-left flex flex_column">
-                <img src="{%static 'img/property.jpg' %}" alt="">
-                <h2 class="location" style="text-align: center;">Dwarika</h2>
-                <div class="flex" style="justify-content: space-evenly;">
-                    <h4 class="bhk">2bhk</h4>
-                    <h4 class="Area">Area no. 1000</h4>
+               <!--  <div class="home-border">
+                  <div class="home-filter">
+                    <img
+                      alt="image"
+                      src="public/playground_assets/location.svg"
+                      class="home-image1"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Destination"
+                      class="home-textinput input"
+                    />
+                    <div class="home-search">
+                      <img
+                        alt="image"
+                        src="public/playground_assets/search.svg"
+                        class="home-icon10"
+                      />
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="tours" class="home-quick-view">
+          <div class="home-main1">
+            <div class="home-sorting">
+              <button class="home-option-primary button">All</button>
+              <button class="button-option button">Popular</button>
+              <button class="button-option button">Featured</button>
+              <button class="button-option button">Trending</button>
+            </div>
+          </div>
+          <div class="home-offers">
+            <a href="index.html">
+              <div class="home-offer-container">
+                <div class="offer-offer">
+                  <div class="offer-content">
+                    <div class="offer-details">
+                      <div class="offer-gallery-card">
+                        <img
+                          alt="image"
+                          src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDJ8fGhvdXNlfGVufDB8fHx8MTY3OTc0Mjc0Ng&amp;ixlib=rb-4.0.3&amp;w=1500"
+                          class="offer-image"
+                        />
+                        <div class="offer-container"></div>
+                        <h2 class="offer-heading">
+                          <span class="offer-text">My house</span>
+                          <br />
+                        </h2>
+                      </div>
+                      <h2 class="offer-price">
+                        <span class="offer-text2">My house</span>
+                        <br />
+                      </h2>
+                    </div>
+                    <span class="offer-text4">
+                      <span>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt.
+                      </span>
+                    </span>
+                  </div>
                 </div>
-                
+              </div>
+            </a>
+            <a href="index.html">
+              <div class="home-offer-container1">
+                <div class="offer-offer">
+                  <div class="offer-content">
+                    <div class="offer-details">
+                      <div class="offer-gallery-card">
+                        <img
+                          alt="image"
+                          src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDJ8fGhvdXNlfGVufDB8fHx8MTY3OTc0Mjc0Ng&amp;ixlib=rb-4.0.3&amp;w=1500"
+                          class="offer-image"
+                        />
+                        <div class="offer-container"></div>
+                        <h2 class="offer-heading">
+                          <span class="offer-text">My house</span>
+                          <br />
+                        </h2>
+                      </div>
+                      <h2 class="offer-price">
+                        <span class="offer-text2">My house</span>
+                        <br />
+                      </h2>
+                    </div>
+                    <span class="offer-text4">
+                      <span>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt.
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="index.html">
+              <div class="home-offer-container2">
+                <div class="offer-offer">
+                  <div class="offer-content">
+                    <div class="offer-details">
+                      <div class="offer-gallery-card">
+                        <img
+                          alt="image"
+                          src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDJ8fGhvdXNlfGVufDB8fHx8MTY3OTc0Mjc0Ng&amp;ixlib=rb-4.0.3&amp;w=1500"
+                          class="offer-image"
+                        />
+                        <div class="offer-container"></div>
+                        <h2 class="offer-heading">
+                          <span class="offer-text">My house</span>
+                          <br />
+                        </h2>
+                      </div>
+                      <h2 class="offer-price">
+                        <span class="offer-text2">My house</span>
+                        <br />
+                      </h2>
+                    </div>
+                    <span class="offer-text4">
+                      <span>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt.
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="index.html">
+              <div class="home-offer-container3">
+                <div class="offer-offer">
+                  <div class="offer-content">
+                    <div class="offer-details">
+                      <div class="offer-gallery-card">
+                        <img
+                          alt="image"
+                          src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDJ8fGhvdXNlfGVufDB8fHx8MTY3OTc0Mjc0Ng&amp;ixlib=rb-4.0.3&amp;w=1500"
+                          class="offer-image"
+                        />
+                        <div class="offer-container"></div>
+                        <h2 class="offer-heading">
+                          <span class="offer-text">My house</span>
+                          <br />
+                        </h2>
+                      </div>
+                      <h2 class="offer-price">
+                        <span class="offer-text2">My house</span>
+                        <br />
+                      </h2>
+                    </div>
+                    <span class="offer-text4">
+                      <span>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt.
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="index.html">
+              <div class="home-offer-container4">
+                <div class="offer-offer">
+                  <div class="offer-content">
+                    <div class="offer-details">
+                      <div class="offer-gallery-card">
+                        <img
+                          alt="image"
+                          src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDJ8fGhvdXNlfGVufDB8fHx8MTY3OTc0Mjc0Ng&amp;ixlib=rb-4.0.3&amp;w=1500"
+                          class="offer-image"
+                        />
+                        <div class="offer-container"></div>
+                        <h2 class="offer-heading">
+                          <span class="offer-text">My house</span>
+                          <br />
+                        </h2>
+                      </div>
+                      <h2 class="offer-price">
+                        <span class="offer-text2">My house</span>
+                        <br />
+                      </h2>
+                    </div>
+                    <span class="offer-text4">
+                      <span>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt.
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="index.html">
+              <div class="home-offer-container5">
+                <div class="offer-offer">
+                  <div class="offer-content">
+                    <div class="offer-details">
+                      <div class="offer-gallery-card">
+                        <img
+                          alt="image"
+                          src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDJ8fGhvdXNlfGVufDB8fHx8MTY3OTc0Mjc0Ng&amp;ixlib=rb-4.0.3&amp;w=1500"
+                          class="offer-image"
+                        />
+                        <div class="offer-container"></div>
+                        <h2 class="offer-heading">
+                          <span class="offer-text">My house</span>
+                          <br />
+                        </h2>
+                      </div>
+                      <h2 class="offer-price">
+                        <span class="offer-text2">My house</span>
+                        <br />
+                      </h2>
+                    </div>
+                    <span class="offer-text4">
+                      <span>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt.
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="home-pagination">
+            <button class="home-previous button-option button">
+              <svg viewBox="0 0 1024 1024" class="home-icon11">
+                <path d="M658 708l-60 60-256-256 256-256 60 60-196 196z"></path>
+              </svg>
+              <span class="home-text08">Previous</span>
+            </button>
+            <div class="home-pages">
+              <div class="home-primary">
+                <div class="home-number-current page-current page">
+                  <span class="home-text09">1</span>
+                </div>
+                <div class="page"><span class="home-text10">2</span></div>
+                <div class="page home-number1">
+                  <span class="home-text11">3</span>
+                </div>
+              </div>
+              <img
+                alt="image"
+                src="public/playground_assets/more.svg"
+                class="home-more"
+              />
+              <div class="page"><span class="home-text12">12</span></div>
             </div>
-            <div class="property-right flex flex_column">
-                <h5>
-                    Available
-                </h5>
-                <ul>
-                    <li>gymnasium</li>
-                    <li>microwave</li>
+            <button class="home-next button-option button">
+              <span class="home-text13">Next</span>
+              <svg viewBox="0 0 1024 1024" class="home-icon13">
+                <path
+                  d="M426 256l256 256-256 256-60-60 196-196-196-196z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </section>
+        <section class="home-faq">
+          <div id="faqs" class="home-content1">
+            <div class="home-heading2">
+              <h2 class="home-header2">About Us</h2>
+              <p class="home-caption3">
+                commonly asked FAQ is answered below
+              </p>
+            </div>
+            <div class="home-accordion">
+              <div
+                data-role="accordion-container"
+                class="accordion home-element"
+              >
+                <div class="home-content2">
+                  <span class="home-header3">question goes here                  </span>
+                  <span data-role="accordion-content" class="home-description">answer goes here</span>
+                </div>
+                <div class="home-icon-container">
+                  <svg
+                    viewBox="0 0 1024 1024"
+                    data-role="accordion-icon-closed"
+                    class="home-icon15"
+                  >
+                    <path
+                      d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                    ></path></svg><svg
+                    viewBox="0 0 1024 1024"
+                    data-role="accordion-icon-open"
+                    class="home-icon17"
+                  >
+                    <path
+                      d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              
 
-                </ul>
-                <h5>
-                    Unavailable
-                </h5>
-                <ul>
-                    <li>carparking</li>
-                    <li>ATM</li>
-                    
-                </ul>
-                <a href="property.html"><button>Get Property Analysis</button></a>
             </div>
+          </div>
+        </section>
+        <section id="find" class="home-find">
+          <div class="home-heading3">
+            <h2 class="home-header8">
+              Buy, Sell, and Trade Real Estate with Confidence on Our Platform
+            </h2>
+          </div>
+  
+        </section>
+        <section class="home-footer">
+          <div class="home-content7">
+            <div class="home-main2">
+              <div class="home-branding">
+                <div class="home-heading4">
+                  <div class=logo><img id=logoimg src="{%static 'img/logo2.png' %}" alt="Unavailable"></div>
+                  <p class="home-caption5">
+                    Property trading website, made with love
+                  </p>
+                </div>
+              </div>
+              <div class="home-links1">
+               
+               
+                <div class="home-items2">
+                  <button class="home-link09 button button-clean">
+                    About us
+                  </button>
+                  <button class="home-link11 button button-clean">
+                    SIGN UP
+                  </button>
+                  <button class="home-link12 button button-clean">Faqs</button>
+                </div>
+              </div>
+            </div>
+            <span class="home-copyright">
+             
+            </span>
+          </div>
+        </section>
+        <div>
+          <dangerous-html
+            html="<script>
+ /*
+  Accordion - Code Embed
+  */
+  const accordionContainers = document.querySelectorAll('[data-role='accordion-container']'); // All accordion containers
+  const accordionContents = document.querySelectorAll('[data-role='accordion-content']'); // All accordion content
+  const accordionIconsClosed = document.querySelectorAll('[data-role='accordion-icon-closed']'); // All accordion closed icons
+  const accordionIconsOpen = document.querySelectorAll('[data-role='accordion-icon-open']'); // All accordion open icons
+
+  accordionContents.forEach((accordionContent) => {
+      accordionContent.style.display = 'none'; //Hides all accordion contents
+  });
+
+  accordionIconsClosed.forEach((icon) => {
+    icon.style.display = 'flex'
+  })
+
+  accordionIconsOpen.forEach((icon) => {
+    icon.style.display = 'none'
+  })
+
+  accordionContainers.forEach((accordionContainer, index) => {
+      accordionContainer.addEventListener('click', () => {
+          if (accordionContents[index].style.display === 'flex') {
+              // If the accordion is already open, close it
+              accordionContents[index].style.display = 'none';
+              accordionIconsClosed[index].style.display = 'flex';
+              accordionIconsOpen[index].style.display = 'none'
+          } else {
+              // If the accordion is closed, open it
+              accordionContents.forEach((accordionContent) => {
+                  accordionContent.style.display = 'none'; //Hides all accordion contents
+              });
+
+              accordionIconsClosed.forEach((accordionIcon) => {
+                  accordionIcon.style.display = 'flex'; // Resets all icon transforms to 0deg (default)
+              });
+
+              accordionIconsOpen.forEach((accordionIcon) => {
+                accordionIcon.style.display = 'none';
+              })
+              
+              accordionContents[index].style.display = 'flex'; // Shows accordion content
+              accordionIconsClosed[index].style.display = 'none'; // Rotates accordion icon 180deg
+              accordionIconsOpen[index].style.display = 'flex';
+          }
+      });
+  });
+</script>
+"
+          ></dangerous-html>
         </div>
       </div>
-</body>
-<script>
-    $(document).ready(function() {
-  $('.property-card').click(function() {
-    $('.popup').show();
-  });
+    </div>
+    <script
+      data-section-id="navbar"
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script>
   
-  $('.close-popup').click(function() {
-    $('.popup').hide();
-  });
-  $('nav').click(function() {
-    $('.popup').hide();
-  });
-});
-
-</script>
-<!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> -->
-
 {% endblock %}

@@ -15,10 +15,10 @@
   </head>
   <body>
     <ul class=base-ul>
-        <li class=base-li><a class="base-active base" href="/">PropFolio</a></li>
-        <li class=base-li><a class=base >Account</a></li>
+        <li class=base-li><div class=logo><img id=logoimg src="{%static 'img/logo2.png' %}" alt="Unavailable"></div></li>
 
         {%if request.user.is_authenticated%}
+        <li style="float:right" class=base-li><a class=base >Account</a></li>
         <li style="float:right" class=base-li><a class=base href="{% url 'logout' %}">Logout</a></li>
         {%else%}
         <li style="float:right" class=base-li><a class=base href="{% url 'sign_in' %}">Sign in/Register</a></li>
@@ -26,7 +26,7 @@
 
     </ul>
 
-
+    
     {%block content%}
     {%endblock%}
   </body>
