@@ -82,12 +82,7 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'propfolio',
         'NAME': 'postgres',
-        'OPTIONS': {
-            'sslmode': 'verify-ca', #leave this line intact
-            'sslrootcert': 'certificates/server-ca.pem',
-            "sslcert": "certificates/client-cert.pem",
-            "sslkey": "certificates/client-key.pem",
-        }
+        
     }
 }
 
