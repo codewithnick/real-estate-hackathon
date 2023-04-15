@@ -8,6 +8,7 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 {% endblock%}
 {% block content%}
+{% for x in objs %}
 <div class="flex property-analysis">
     <section class="left flex flex_column">
       <div class="comparisons flex flex_column">
@@ -16,11 +17,11 @@
           <div class="property-details flex flex_column">
             <h2>Property Details</h2>
             <ul>
-              <li><strong>Address:</strong> 123 Main St.</li>
+              <li><strong>Address:</strong> {{x.location}}</li>
               <li><strong>Price:</strong> $500,000</li>
-              <li><strong>Bedrooms:</strong> 3</li>
+              <li><strong>Bedrooms:</strong> {{x.No_of_Bedrooms}}</li>
               <li><strong>Bathrooms:</strong> 2</li>
-              <li><strong>Square Feet:</strong> 2,000</li>
+              <li><strong>Square Feet:</strong> {{x.area}}</li>
             </ul>
           </div>
 
@@ -48,10 +49,10 @@
                 <td>Price</td><td>100000</td>
             </tr>
             <tr>
-                <td>BHK</td><td>1</td>
+                <td>BHK</td><td>{{x.No_of_Bedrooms}}</td>
             </tr>
             <tr>
-                <td>area</td><td>1000</td>
+                <td>area</td><td>{{x.area}}</td>
             </tr>
             <tr>
                 <td>Price/sqft</td><td>100</td>
@@ -162,5 +163,5 @@
         }
         document.getElementsByClassName('')
       </script>
-
+{%endfor%}
 {% endblock %}

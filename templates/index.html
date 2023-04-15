@@ -90,177 +90,69 @@
         <section id="tours" class="home-quick-view">
             <div id="mypropertiescontainer" style="width: 100%;">
               <div class="flex property-container flex_column">
-                  <span>Delhi</span> 
+                  <span>Delhi</span>
+
                   <div class="property-slider flex" style="display: flex;">
+                      {% for x in objs1 %}
                       <div class="property-card flex flex_column" onclick="location('#')">
                           <div class="property-image"> 
                               <img src="{%static 'img/property.jpg' %}" alt="">
                           </div>
                           <div class="details flex">
                               <div class="flex flex_column">
-                                  <div class="location">Sector 10 Dwarka</div>
-                                  <div class="bhk">2 BHK</div>
+                                  <div class="location">{{x.location}}</div>
+                                  <div class="bhk">{{x.No_of_Bedrooms}} BHK</div>
                               </div>
-                              <a href="#" class="view_more more-details">see more</a>
-                              
+                              <a href="{% url 'prop' x.id %}" class="view_more more-details">see more</a>
                           </div>
                       </div>
-                      <div class="property-card flex flex_column">
-                          <div class="property-image"> 
-                              <img src="{%static 'img/property.jpg' %}" alt="">
-                          </div>
-                          <div class="details flex">
-                              <div class="flex flex_column">
-                                  <div class="location">Sector 10 Dwarka</div>
-                                  <div class="bhk">2 BHK</div>
-                              </div>
-                              <a href="#" class="view_more more-details">see more</a>
-                              
-                          </div>
-                      </div>
-                      <div class="property-card flex flex_column">
-                          <div class="property-image"> 
-                              <img src="{%static 'img/property.jpg' %}" alt="">
-                          </div>
-                          <div class="details flex">
-                              <div class="flex flex_column">
-                                  <div class="location">Sector 10 Dwarka</div>
-                                  <div class="bhk">2 BHK</div>
-                              </div>
-                              <a href="#" class="view_more more-details">see more</a>
-                              
-                          </div>
-                      </div>
-                      <div class="property-card flex flex_column">
-                          <div class="property-image"> 
-                              <img src="{%static 'img/property.jpg' %}" alt="">
-                          </div>
-                          <div class="details flex">
-                              <div class="flex flex_column">
-                                  <div class="location">Sector 10 Dwarka</div>
-                                  <div class="bhk">2 BHK</div>
-                              </div>
-                              <a href="#" class="view_more more-details">see more</a>
-                              
-                          </div>
-                      </div>
+                      {%endfor%}
                   </div>
               </div>
+
               <div class="flex property-container flex_column">
-                <span>Delhi</span> 
-                <div class="property-slider flex" style="display: flex;">
-                    <div class="property-card flex flex_column">
-                        <div class="property-image"> 
-                            <img src="{%static 'img/property.jpg' %}" alt="">
-                        </div>
-                        <div class="details flex">
-                            <div class="flex flex_column">
-                                <div class="location">Sector 10 Dwarka</div>
-                                <div class="bhk">2 BHK</div>
-                            </div>
-                            <a href="#" class="view_more more-details">see more</a>
-                            
-                        </div>
-                    </div>
-                    <div class="property-card flex flex_column">
-                        <div class="property-image"> 
-                            <img src="{%static 'img/property.jpg' %}" alt="">
-                        </div>
-                        <div class="details flex">
-                            <div class="flex flex_column">
-                                <div class="location">Sector 10 Dwarka</div>
-                                <div class="bhk">2 BHK</div>
-                            </div>
-                            <a href="#" class="view_more more-details">see more</a>
-                            
-                        </div>
-                    </div>
-                    <div class="property-card flex flex_column">
-                        <div class="property-image"> 
-                            <img src="{%static 'img/property.jpg' %}" alt="">
-                        </div>
-                        <div class="details flex">
-                            <div class="flex flex_column">
-                                <div class="location">Sector 10 Dwarka</div>
-                                <div class="bhk">2 BHK</div>
-                            </div>
-                            <a href="#" class="view_more more-details">see more</a>
-                            
-                        </div>
-                    </div>
-                    <div class="property-card flex flex_column">
-                        <div class="property-image"> 
-                            <img src="{%static 'img/property.jpg' %}" alt="">
-                        </div>
-                        <div class="details flex">
-                            <div class="flex flex_column">
-                                <div class="location">Sector 10 Dwarka</div>
-                                <div class="bhk">2 BHK</div>
-                            </div>
-                            <a href="#" class="view_more more-details">see more</a>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="flex property-container flex_column">
-              <span>Delhi</span> 
-              <div class="property-slider flex" style="display: flex;">
-                  <div class="property-card flex flex_column">
-                      <div class="property-image"> 
-                          <img src="{%static 'img/property.jpg' %}" alt="">
-                      </div>
-                      <div class="details flex">
-                          <div class="flex flex_column">
-                              <div class="location">Sector 10 Dwarka</div>
-                              <div class="bhk">2 BHK</div>
+                  <span>Mumbai</span>
+
+                  <div class="property-slider flex" style="display: flex;">
+                      {% for x in objs2 %}
+                      <div class="property-card flex flex_column" onclick="location('#')">
+                          <div class="property-image">
+                              <img src="{%static 'img/property.jpg' %}" alt="">
                           </div>
-                          <a href="#" class="view_more more-details">see more</a>
-                          
-                      </div>
-                  </div>
-                  <div class="property-card flex flex_column">
-                      <div class="property-image"> 
-                          <img src="{%static 'img/property.jpg' %}" alt="">
-                      </div>
-                      <div class="details flex">
-                          <div class="flex flex_column">
-                              <div class="location">Sector 10 Dwarka</div>
-                              <div class="bhk">2 BHK</div>
+                          <div class="details flex">
+                              <div class="flex flex_column">
+                                  <div class="location">{{x.location}}</div>
+                                  <div class="bhk">{{x.No_of_Bedrooms}} BHK</div>
+                              </div>
+                              <a href="{% url 'prop' x.id %}" class="view_more more-details">see more</a>
                           </div>
-                          <a href="#" class="view_more more-details">see more</a>
-                          
                       </div>
-                  </div>
-                  <div class="property-card flex flex_column">
-                      <div class="property-image"> 
-                          <img src="{%static 'img/property.jpg' %}" alt="">
-                      </div>
-                      <div class="details flex">
-                          <div class="flex flex_column">
-                              <div class="location">Sector 10 Dwarka</div>
-                              <div class="bhk">2 BHK</div>
-                          </div>
-                          <a href="#" class="view_more more-details">see more</a>
-                          
-                      </div>
-                  </div>
-                  <div class="property-card flex flex_column">
-                      <div class="property-image"> 
-                          <img src="{%static 'img/property.jpg' %}" alt="">
-                      </div>
-                      <div class="details flex">
-                          <div class="flex flex_column">
-                              <div class="location">Sector 10 Dwarka</div>
-                              <div class="bhk">2 BHK</div>
-                          </div>
-                          <a href="#" class="view_more more-details">see more</a>
-                          
-                      </div>
+                      {%endfor%}
                   </div>
               </div>
-          </div>
-          </div>
+
+              <div class="flex property-container flex_column">
+                  <span>Banglore</span>
+
+                  <div class="property-slider flex" style="display: flex;">
+                      {% for x in objs3 %}
+                      <div class="property-card flex flex_column" onclick="location('#')">
+                          <div class="property-image">
+                              <img src="{%static 'img/property.jpg' %}" alt="">
+                          </div>
+                          <div class="details flex">
+                              <div class="flex flex_column">
+                                  <div class="location">{{x.location}}</div>
+                                  <div class="bhk">{{x.No_of_Bedrooms}} BHK</div>
+                              </div>
+                              <a href="{% url 'prop' x.id %}" class="view_more more-details">see more</a>
+                          </div>
+                      </div>
+                      {%endfor%}
+                  </div>
+              </div>
+
+
           </div>
          
         </section>

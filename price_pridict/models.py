@@ -4,6 +4,7 @@ from django.db import models
 class property(models.Model):
     area=models.IntegerField()
     location=models.CharField(max_length=100)
+    city=models.CharField(max_length=100)
     No_of_Bedrooms=models.IntegerField()
     Resale=models.IntegerField()
     MaintenanceStaff=models.IntegerField()
