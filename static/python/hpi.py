@@ -1,0 +1,40 @@
+import math
+import random
+
+random.seed()
+def hpi(price,year):
+    if(year=="2017 q1"):
+        return (98/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2017 q2"):
+        return (99/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2018 q1"):
+        return (104/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2018 q2"):
+        return (107/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2019 q1"):
+        return (104/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2019 q2"):
+        return (113/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2020 q2"):
+        return (104/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2021 q1"):
+        return (105/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2021 q2"):
+        return (106/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2022 q1"):
+        return (109/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2022 q2"):
+        return (110/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2023 q1"):
+        return (111/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2023 q2"):
+        return (111/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2024 q1"):
+        return (112/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2024 q2"):
+        return (114/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2025 q1"):
+        return (115/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+    elif(year=="2025 q2"):
+        return (116/108)*price+random.randrange(-1*price*1000,price*1000)/100000
+
