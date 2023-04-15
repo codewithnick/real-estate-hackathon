@@ -2,6 +2,7 @@ from django.shortcuts import render , redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
+from .models import property
 # Create your views here.
 def sign_in(request):
     if request.method=='POST':
@@ -30,3 +31,10 @@ def sign_up(request):
         return render(request,'sign_up.html')
 def home(request):
     return render(request,'index.html')
+def prop(request):
+        if request.user.is_authenticated:
+            objs =property.objects.all()
+            return render(request,'property.html', {'objs' : objs})
+        else:
+            return redirect('/')
+
