@@ -19,7 +19,6 @@
 }
 
 .base-li a:hover, .dropdown:hover .dropbtn {
-  background-color: rgba(255, 0, 0, 0.406);
 }
 
 .base-li.dropdown {

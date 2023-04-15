@@ -274,12 +274,21 @@
                
                
                 <div class="home-items2">
+                  <a href="#faqs">
                   <button class="home-link09 button button-clean">
                     FAQ
                   </button>
-                  <button class="home-link11 button button-clean">
-                    SIGN UP
-                  </button>
+                  </a>
+                  <a href="{% url 'sign_up' %}">
+                    <button class="home-link09 button button-clean">
+                      REGISTER
+                    </button>
+                    </a>
+                    <a href="{% url 'sign_in' %}">
+                      <button class="home-link09 button button-clean">
+                        SIGN IN
+                      </button>
+                      </a>
               </div>
             </div>
             <span class="home-copyright">

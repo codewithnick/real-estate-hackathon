@@ -25,7 +25,10 @@ def prediction(area,gas,lat,bhk,lng,pool,playarea,powerbacup,ac):
   pickled_model=pickle.load(open(pwd+'\\model.pkl','rb'))
   val=[[area,gas,lat,bhk,lng,pool,playarea,powerbacup,ac]]
   return round(float(pickled_model.predict(val)[0]) *(10**5),2)
-
+def formatINR(number):
+    s, *d = str(number).partition(".")
+    r = ",".join([s[x-2:x] for x in range(-3, -len(s), -2)][::-1] + [s[-3:]])
+    return "".join([r] + d)
 
 random.seed()
 def hpi(price,year):
@@ -262,7 +265,7 @@ def home(request):
 def prop(request,prop_id):
     if request.method=='GET':
         c_user=request.user
-        usr=User.objects.filter(id=c_user)
+        #usr=User.objects.filter(id=c_user)
         objs =property.objects.filter(id=prop_id)
         for x in objs:
             price=prediction(x.area,x.Gasconnection,x.latitude,x.No_of_Bedrooms,x.longitude,x.SwimmingPool,x.Children_playarea,x.PowerBackup,x.AC)
@@ -283,6 +286,6 @@ def prop(request,prop_id):
             p16=hpi(price,'2024 q2')
             p17=hpi(price,'2025 q1')
             p18=hpi(price,'2025 q2')
-            
-        return render(request,'property.html', {'usr':usr,'objs' : objs,'price':price,'p1':p1,'p2':p2,'p3':p3,'p4':p4,'p5':p5,'p6':p6,'p7':price,'p8':p8,'p9':p9,'p10':p10,'p11':p11,'p12':p12,'p13':p13,'p14':p14,'p15':p15,'p16':p16,'p17':p17,'p18':p18})
+            roi=p16/price*5
+        return render(request,'property.html', {'c_user':c_user,'objs' : objs,'roi':roi,'price':formatINR(price),'p1':p1,'p2':p2,'p3':p3,'p4':p4,'p5':p5,'p6':p6,'p7':price,'p8':p8,'p9':p9,'p10':p10,'p11':p11,'p12':p12,'p13':p13,'p14':p14,'p15':p15,'p16':p16,'p17':p17,'p18':p18})
 
