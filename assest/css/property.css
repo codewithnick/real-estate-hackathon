@@ -1,0 +1,85 @@
+.property-image{
+  display: flex;
+}
+.property-image img{    
+    height: 150px;
+    width: 250px;
+    margin: 10px;
+}
+.flex{
+  display: flex;
+}
+.flex_column{
+  flex-direction: column;
+}
+#mypropertiescontainer{
+  width: 100%;
+}
+#tours{
+  background-color: #e5e5e5;
+}
+/* width and height of the scrollbar track */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+/* width and height of the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #999; /* color of the thumb */
+  border-radius: 6px; /* rounded corners */
+}
+
+/* hover style for the thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* darker color on hover */
+}
+
+/* style for the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #eee; /* color of the track */
+  border-radius: 6px; /* rounded corners */
+}
+
+.property-card{
+    background-color: #E8DED5;
+    height: 225px;
+    width: 325px;
+    margin: 10px;
+    border-radius: 10px;
+    
+}
+.property-card .details{
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: space-around;
+}
+.property-container{
+    width: 100%;
+    margin: 10px;
+    align-items: center;
+    text-align: center;
+}
+.property-container span{
+  color: rgb(53, 43, 42);
+  font-size: 40px;
+  font-style: normal;
+  font-family: Cormorant Infant;
+  font-weight: 700;
+  line-height: 60px;
+}
+.details div{
+  margin-bottom: 5px;
+}
+.editor span{
+   text-decoration: underline;
+   background-color: ghostwhite;
+    width: 100%;
+}
+.property-slider{
+    width: 100%;
+    overflow-y: scroll;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
