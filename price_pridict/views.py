@@ -22,7 +22,7 @@ import pickle
 import os
 def prediction(area,gas,lat,bhk,lng,pool,playarea,powerbacup,ac):
   pwd = os.path.dirname(__file__)
-  pickled_model=pickle.load(open(pwd+'\\model.pkl','rb'))
+  pickled_model=pickle.load(open(pwd+'/model.pkl','rb'))
   val=[[area,gas,lat,bhk,lng,pool,playarea,powerbacup,ac]]
   return round(float(pickled_model.predict(val)[0]) *(10**5),2)
 def formatINR(number):
