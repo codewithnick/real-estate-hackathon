@@ -10,7 +10,7 @@ To build the machine learning model, historical data about property prices and s
 
 # Results:
 
-The real estate trading website will provide users with an estimated value of their property, its ROI, and predicted future price trends. By using the machine learning model, the website will be able to provide accurate predictions based on historical data, helping users to make informed decisions about buying or selling properties.
+The real estate trading website will provide users with an estimated value of their property, its Return On Investment, and predicted future price trends. By using the machine learning model, the website will be able to provide accurate predictions based on historical data, helping users to make informed decisions about buying or selling properties.
 
 In addition, the website can be used by real estate agents and investors to identify undervalued properties that have potential for a high return on investment. The predictions provided by the machine learning model can also help users to plan their investments and financial goals by predicting future prices.
 
